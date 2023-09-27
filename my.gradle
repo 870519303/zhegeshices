@@ -1,0 +1,17 @@
+android {
+
+    
+    flavorDimensions "default"
+    
+    productFlavors {
+        ppapp {}
+        jjwo {}
+        fodfi {}
+        feifei {}
+    }
+    
+    productFlavors.all { flavor ->
+        flavor.manifestPlaceholders = [CHANNEL_VALUE: name]
+    }
+}
+
